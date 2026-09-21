@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS cadastro
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE cadastro;
+
+CREATE TABLE IF NOT EXISTS aluno (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    curso VARCHAR(50) NOT NULL,
+    genero VARCHAR(20),
+    receberEmail BOOLEAN DEFAULT FALSE,
+    receberNotificacao BOOLEAN DEFAULT FALSE,
+    rua VARCHAR(150),
+    cidade VARCHAR(100)
+);
